@@ -1,0 +1,58 @@
+.mobile-container{
+
+    background:
+    linear-gradient(
+        to bottom,
+        var(--primary-color),
+        var(--background-color) 40%
+    );
+
+    padding: 20px;
+}
+
+/* HEADER */
+
+.reminder-header{
+
+    margin-top: 40px;
+}
+
+/* HEADER TOP */
+
+.header-top{
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    width: 100%;
+}
+
+/* HEADER TEXT */
+
+.header-text{
+
+    width: 80%;
+}
+
+.reminder-header h1{
+
+    color: var(--white-color);
+
+    font-size: 32px;
+
+    font-weight: 700;
+
+    margin-bottom: 5px;
+}
+
+.reminder-header h5{
+
+    color: var(--white-color);
+
+    font-size: 14px;
+
+    font-weight: 400;
+}
