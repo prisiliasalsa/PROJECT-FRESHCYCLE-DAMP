@@ -1,0 +1,137 @@
+.mobile-container {
+    background: linear-gradient(
+        to bottom,
+        var(--primary-color),
+        var(--background-color) 40%
+    ) !important;
+    padding: 20px !important;
+}
+
+/* HEADER */
+.recipe-header {
+    margin-top: 40px;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.header-text {
+    width: 80%;
+}
+
+.recipe-header h1 {
+    color: var(--white-color);
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.recipe-header p {
+    color: var(--white-color);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/* SEARCH BAR */
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--white-color);
+    border-radius: 999px;
+    padding: 0 16px;
+    margin-top: 28px;
+    height: 44px;
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    font-size: 14px;
+    font-family: inherit;
+    width: 100%;
+}
+
+.search-bar input::placeholder { color: #adb5bd; }
+.search-bar svg { width: 18px; height: 18px; color: #6b7280; flex-shrink: 0; }
+
+/* CARD LIST */
+.recipe-list {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding-bottom: 110px;
+}
+
+/* RECIPE CARD */
+.recipe-card {
+    background: var(--white-color);
+    border-radius: 22px;
+    overflow: hidden;
+    border: 2px solid #FFD58A;
+    cursor: pointer;
+}
+
+.card-img-wrap {
+    position: relative;
+    height: 180px;
+    overflow: hidden;
+}
+
+.card-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.badge-expiring {
+    position: absolute;
+    top: 12px; left: 12px;
+    background: var(--orange-color);
+    color: var(--white-color);
+    font-size: 10px;
+    font-weight: 800;
+    padding: 5px 11px;
+    border-radius: 20px;
+}
+
+.card-meta {
+    display: flex;
+    gap: 8px;
+    position: absolute;
+    bottom: 10px; left: 12px;
+}
+
+.meta-pill {
+    background: rgba(255,255,255,0.3);
+    backdrop-filter: blur(6px);
+    color: var(--dark-color);
+    font-size: 11px;
+    padding: 3px 10px;
+    border-radius: 20px;
+}
+
+.card-info { padding: 14px 16px 0; }
+.card-info h3 { font-size: 18px; font-weight: 700; color: var(--dark-color); }
+.card-info .level { font-size: 11px; color: #A0A0A0; margin-top: 3px; }
+
+.btn-cook {
+    display: block;
+    width: calc(100% - 32px);
+    background: var(--orange-color);
+    color: var(--white-color);
+    text-align: center;
+    padding: 11px;
+    font-size: 13px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    border-radius: 10px;
+    margin: 14px 16px 16px;
+}
