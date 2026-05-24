@@ -8,6 +8,10 @@
     );
 
     padding: 20px;
+
+    min-height: 100vh;
+
+    position: relative;
 }
 
 /* HEADER */
@@ -55,4 +59,354 @@
     font-size: 14px;
 
     font-weight: 400;
+}
+
+.notification-icon img{
+
+    width: 24px;
+}
+
+/* TOTAL ITEMS */
+
+.total-items-card{
+
+    background: var(--white-color);
+
+    border-radius: 16px;
+
+    padding: 16px;
+
+    margin-top: 20px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.total-left{
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.total-left img{
+
+    width: 20px;
+}
+
+.total-items-card p{
+
+    font-size: 14px;
+}
+
+/* EXPIRING CARD */
+
+.expiring-card{
+
+    background: var(--white-color);
+
+    border-radius: 20px;
+
+    padding: 20px;
+
+    margin-top: 20px;
+}
+
+.expiring-top{
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.expiring-top img{
+
+    width: 90px;
+}
+
+.expiring-card h5{
+
+    color: orange;
+
+    margin-bottom: 10px;
+}
+
+.expiring-card h1{
+
+    font-size: 48px;
+
+    margin-bottom: 5px;
+}
+
+.expiring-card p{
+
+    font-size: 14px;
+}
+
+/* FOOD STOCK */
+
+.food-stock-card{
+
+    background: var(--white-color);
+
+    border-radius: 20px;
+
+    padding: 20px;
+
+    margin-top: 20px;
+}
+
+.food-stock-card h3{
+
+    margin-bottom: 20px;
+}
+
+.stock-item{
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 15px;
+}
+
+.stock-left{
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    width: 40%;
+}
+
+.stock-left p{
+
+    font-size: 14px;
+}
+
+.stock-dot{
+
+    width: 12px;
+
+    height: 12px;
+
+    border-radius: 50%;
+
+    background: teal;
+}
+
+.expiring{
+
+    background: #9bd4dc;
+}
+
+.expired{
+
+    background: #d9e4ea;
+}
+
+.stock-bar{
+
+    width: 40%;
+
+    height: 10px;
+
+    background: #eeeeee;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+.bar-fill{
+
+    height: 100%;
+
+    border-radius: 10px;
+}
+
+.fresh{
+
+    width: 80%;
+
+    background: teal;
+}
+
+.warning{
+
+    width: 40%;
+
+    background: #9bd4dc;
+}
+
+.expired-fill{
+
+    width: 20%;
+
+    background: #d9e4ea;
+}
+
+.waste-alert{
+
+    background: #ffbe76;
+
+    padding: 14px;
+
+    border-radius: 14px;
+
+    margin-top: 20px;
+
+    text-align: center;
+}
+
+.waste-alert p{
+
+    color: var(--white-color);
+
+    font-size: 13px;
+
+    font-weight: 500;
+}
+
+/* FRIDGE SECTION */
+
+.fridge-section{
+
+    margin-top: 25px;
+}
+
+.fridge-section h3{
+
+    margin-bottom: 15px;
+}
+
+.fridge-container{
+
+    display: flex;
+
+    gap: 15px;
+
+    overflow-x: auto;
+
+    padding-bottom: 5px;
+}
+
+.fridge-container::-webkit-scrollbar{
+
+    display: none;
+}
+
+.fridge-card{
+
+    background: var(--white-color);
+
+    border-radius: 18px;
+
+    padding: 20px;
+
+    min-width: 120px;
+
+    text-align: center;
+}
+
+.fridge-card img{
+
+    width: 45px;
+
+    margin-bottom: 10px;
+}
+
+.fridge-card h4{
+
+    font-size: 15px;
+
+    margin-bottom: 5px;
+}
+
+.fridge-card p{
+
+    font-size: 12px;
+}
+
+/* ACTIVITY */
+
+.activity-section{
+
+    margin-top: 25px;
+
+    padding-bottom: 120px;
+}
+
+.activity-section h3{
+
+    margin-bottom: 15px;
+}
+
+.activity-card{
+
+    background: var(--white-color);
+
+    border-radius: 16px;
+
+    padding: 16px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 15px;
+}
+
+.activity-left{
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+.activity-icon{
+
+    width: 22px;
+
+    height: 22px;
+
+    background: teal;
+
+    border-radius: 6px;
+}
+
+.activity-card h4{
+
+    font-size: 14px;
+
+    margin-bottom: 3px;
+}
+
+.activity-card p{
+
+    font-size: 12px;
+
+    color: gray;
+}
+
+.activity-card span{
+
+    font-size: 11px;
+
+    color: gray;
 }

@@ -127,3 +127,357 @@ body{
 
     object-fit: contain;
 }
+
+/* FOOD STOCK OVERVIEW */
+
+.food-stock-card{
+
+    background: #ffffff;
+
+    border-radius: 22px;
+
+    padding: 18px 16px;
+
+    margin-top: 20px;
+
+    border: 2px solid #2f97a5;
+
+    box-shadow:
+        0px 4px 10px rgba(0, 0, 0, 0.08);
+
+    width: 100%;
+}
+
+.food-stock-card h3{
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    color: #177f8d;
+
+    margin-bottom: 18px;
+}
+
+/* STOCK ITEM */
+
+.stock-item{
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 18px;
+}
+
+/* LABEL */
+
+.stock-label{
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    width: 42%;
+}
+
+.stock-label p{
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    color: #2a2a2a;
+}
+
+/* DOT */
+
+.stock-dot{
+
+    width: 20px;
+
+    height: 20px;
+
+    border-radius: 50%;
+}
+
+.fresh-dot{
+
+    background: #248996;
+}
+
+.expiring-dot{
+
+    background: #8ec0c8;
+}
+
+.expired-dot{
+
+    background: #d8e7ea;
+}
+
+/* PROGRESS BAR */
+
+.stock-progress{
+
+    width: 42%;
+
+    height: 20px;
+
+    background: #f0f1f4;
+
+    border-radius: 30px;
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+.progress-fill{
+
+    height: 100%;
+
+    border-radius: 30px;
+}
+
+.fresh-fill{
+
+    width: 80%;
+
+    background: #248996;
+}
+
+.expiring-fill{
+
+    width: 36%;
+
+    background: #8ec0c8;
+}
+
+.expired-fill{
+
+    width: 22%;
+
+    background: #d8e7ea;
+}
+
+/* NUMBER */
+
+.stock-item span{
+
+    width: 20px;
+
+    text-align: right;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #1f1f1f;
+}
+
+/* ALERT */
+
+.waste-alert{
+
+    background: #f6b26a;
+
+    border-radius: 18px;
+
+    padding: 14px;
+
+    margin-top: 10px;
+
+    text-align: center;
+}
+
+.waste-alert p{
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+/* FRIDGE MOOD */
+
+.fridge-section{
+
+    margin-top: 28px;
+}
+
+.fridge-section h2{
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    color: #177f8d;
+
+    margin-bottom: 18px;
+}
+
+/* CONTAINER */
+
+.fridge-container{
+
+    display: flex;
+
+    gap: 14px;
+
+    overflow-x: auto;
+
+    padding-bottom: 10px;
+}
+
+.fridge-container::-webkit-scrollbar{
+
+    display: none;
+}
+
+/* CARD */
+
+.fridge-card{
+
+    min-width: 140px;
+
+    background: #ffffff;
+
+    border-radius: 24px;
+
+    border: 2px solid #2f97a5;
+
+    padding: 18px 14px;
+
+    text-align: center;
+
+    box-shadow:
+        0px 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* ICON */
+
+.mood-icon{
+
+    width: 48px;
+
+    margin-bottom: 14px;
+}
+
+/* PROGRESS CIRCLE */
+
+.progress-circle{
+
+    width: 74px;
+
+    height: 74px;
+
+    border-radius: 50%;
+
+    margin: 0 auto 14px auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    position: relative;
+}
+
+.progress-circle::before{
+
+    content: "";
+
+    position: absolute;
+
+    width: 48px;
+
+    height: 48px;
+
+    background: #ffffff;
+
+    border-radius: 50%;
+}
+
+.progress-circle span{
+
+    position: relative;
+
+    z-index: 2;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    color: #222222;
+}
+
+/* 70% */
+
+.progress-70{
+
+    background:
+    conic-gradient(
+        #f5a552 0% 70%,
+        #d9e4dc 70% 100%
+    );
+}
+
+/* 40% */
+
+.progress-40{
+
+    background:
+    conic-gradient(
+        #f5a552 0% 40%,
+        #d9e4dc 40% 100%
+    );
+}
+
+/* 10% */
+
+.progress-10{
+
+    background:
+    conic-gradient(
+        #f5a552 0% 10%,
+        #d9e4dc 10% 100%
+    );
+}
+
+/* TEXT */
+
+.fridge-card h3{
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    margin-bottom: 6px;
+
+    color: #222222;
+}
+
+.status-text{
+
+    font-size: 14px;
+
+    color: #1f8a98;
+
+    margin-bottom: 18px;
+}
+
+.fridge-card h4{
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    color: #444444;
+}
