@@ -1,5 +1,3 @@
-<!--ini untuk homepage, dan ini baru kode sementara-->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,12 +10,10 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>FreshCycle</title>
+    <title>FreshCycle - Inventory</title>
 
-    <!-- GLOBAL CSS -->
     <link rel="stylesheet" href="css/style.css">
-    <!-- STATISTICS CSS -->
-     <link rel="stylesheet" href="css/inventory.css">
+    <link rel="stylesheet" href="css/inventory.css">
 
 </head>
 
@@ -25,12 +21,227 @@
 
     <div class="mobile-container">
 
-        <h1>
-            ini isinya inventory page
-        </h1>
+        <div class="gradient-background"></div>
+        
+        <div class="header">
 
+            
+            <h1>Inventory</h1>
+            <div class="subtitle">25 items total</div>
+            
+            <input type="text" class="search-bar" placeholder="Search">
+        </div>
 
-        <!-- BOTTOM NAVBAR -->
+        <div class="filter-tabs">
+            <button class="filter-tab active">All</button>
+            <button class="filter-tab">Vegetable</button>
+            <button class="filter-tab">Protein</button>
+            <button class="filter-tab">Beverages</button>
+            <button class="filter-tab">Carbs</button>
+            <button class="filter-tab">Others</button>
+        </div>
+
+        <div class="stats-container">
+            <div class="stat-card expired">
+                <div class="stat-number">2</div>
+                <div class="stat-label">Expired</div>
+            </div>
+            <div class="stat-card this-week">
+                <div class="stat-number">5</div>
+                <div class="stat-label">This Week</div>
+            </div>
+            <div class="stat-card fresh">
+                <div class="stat-number">3</div>
+                <div class="stat-label">Fresh</div>
+            </div>
+        </div>
+
+        <div class="inventory-list">
+            
+            <div class="inventory-item">
+                <div class="item-emoji">
+                    <img src="image/foods/lettuce.png" alt="lettuce">
+                </div>
+                <div class="item-details">
+                    <div class="item-name">Lettuce</div>
+                    <div class="item-quantity">Qty: 500g</div>
+                    <div class="item-status expired">• Expired</div>
+                </div>
+                <div class="item-right-section">
+                    <div class="item-date">3 May</div>
+                    <div class="item-actions">
+                        <button class="action-btn delete-btn">🗑</button>
+                        <button class="action-btn edit-btn">✏️</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="inventory-item">
+                <div class="item-emoji">
+                    <img src="image/foods/parsley.png" alt="parsley">
+                </div>
+                <div class="item-details">
+                    <div class="item-name">Parsley</div>
+                    <div class="item-quantity">Qty: 100g</div>
+                    <div class="item-status expired">• Expired</div>
+                </div>
+                <div class="item-right-section">
+                    <div class="item-date">4 May</div>
+                    <div class="item-actions">
+                        <button class="action-btn delete-btn">🗑</button>
+                        <button class="action-btn edit-btn">✏️</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="inventory-item2">
+                <div class="item-emoji2">
+                    <img src="image/foods/chicken.png" alt="chicken">
+                </div>
+                <div class="item-details">
+                    <div class="item-name">Chicken</div>
+                    <div class="item-quantity">Qty: 1kg</div>
+                    <div class="item-status expiring">• 5 Days Left</div>
+                </div>
+                <div class="item-right-section">
+                    <div class="item-date2">8 May</div>
+                    <div class="item-actions">
+                        <button class="action-btn delete-btn">🗑</button>
+                        <button class="action-btn edit-btn">✏️</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="inventory-item2">
+                <div class="item-emoji2">
+                    <img src="image/foods/shrimp.png" alt="shrimp">
+                </div>
+                <div class="item-details">
+                    <div class="item-name">Shrimp</div>
+                    <div class="item-quantity">Qty: 100g</div>
+                    <div class="item-status expiring">• 7 Days Left</div>
+                </div>
+                <div class="item-right-section">
+                    <div class="item-date2">10 May</div>
+                    <div class="item-actions">
+                        <button class="action-btn delete-btn">🗑</button>
+                        <button class="action-btn edit-btn">✏️</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="inventory-item2">
+                <div class="item-emoji2">
+                    <img src="image/foods/carrot.png" alt="carrot">
+                </div>
+                <div class="item-details">
+                    <div class="item-name">Carrot</div>
+                    <div class="item-quantity">Qty: 300g</div>
+                    <div class="item-status expiring">• 7 Days Left</div>
+                </div>
+                <div class="item-right-section">
+                    <div class="item-date2">10 May</div>
+                    <div class="item-actions">
+                        <button class="action-btn delete-btn">🗑</button>
+                        <button class="action-btn edit-btn">✏️</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="inventory-item2">
+                <div class="item-emoji2">
+                    <img src="image/foods/dijon mustard.png" alt="dijon mustard">
+                </div>
+                <div class="item-details">
+                    <div class="item-name">Dijon Mustard</div>
+                    <div class="item-quantity">Qty: 500g</div>
+                    <div class="item-status expiring">• 7 Days Left</div>
+                </div>
+                <div class="item-right-section">
+                    <div class="item-date2">10 May</div>
+                    <div class="item-actions">
+                        <button class="action-btn delete-btn">🗑</button>
+                        <button class="action-btn edit-btn">✏️</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="inventory-item2">
+                <div class="item-emoji2">
+                    <img src="image/foods/garlic.png" alt="garlic">
+                </div>
+                <div class="item-details">
+                    <div class="item-name">Garlic</div>
+                    <div class="item-quantity">Qty: 500g</div>
+                    <div class="item-status expiring">• 7 Days Left</div>
+                </div>
+                <div class="item-right-section">
+                    <div class="item-date2">10 May</div>
+                    <div class="item-actions">
+                        <button class="action-btn delete-btn">🗑</button>
+                        <button class="action-btn edit-btn">✏️</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="inventory-item3">
+                <div class="item-emoji3">
+                    <img src="image/foods/spring onion.png" alt="spring onion">
+                </div>
+                <div class="item-details">
+                    <div class="item-name">Spring Onion</div>
+                    <div class="item-quantity">Qty: 500g</div>
+                    <div class="item-status fresh">• 14 Days Left</div>
+                </div>
+                <div class="item-right-section">
+                    <div class="item-date3">17 May</div>
+                    <div class="item-actions">
+                        <button class="action-btn delete-btn">🗑</button>
+                        <button class="action-btn edit-btn">✏️</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="inventory-item3">
+                <div class="item-emoji3">
+                    <img src="image/foods/chilli.png" alt="chili">
+                </div>
+                <div class="item-details">
+                    <div class="item-name">Chili</div>
+                    <div class="item-quantity">Qty: 500g</div>
+                    <div class="item-status fresh">• 20 Days Left</div>
+                </div>
+                <div class="item-right-section">
+                    <div class="item-date3">23 May</div>
+                    <div class="item-actions">
+                        <button class="action-btn delete-btn">🗑</button>
+                        <button class="action-btn edit-btn">✏️</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="inventory-item3">
+                <div class="item-emoji3">
+                    <img src="image/foods/sugar.png" alt="sugar">
+                </div>
+                <div class="item-details">
+                    <div class="item-name">Sugar</div>
+                    <div class="item-quantity">Qty: 500g</div>
+                    <div class="item-status fresh">• 150 Days</div>
+                </div>
+                <div class="item-right-section">
+                    <div class="item-date3">29 Sep</div>
+                    <div class="item-actions">
+                        <button class="action-btn delete-btn">🗑</button>
+                        <button class="action-btn edit-btn">✏️</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <button class="floating-add-button"></button>
+
 
         <div class="bottom-navbar">
 
@@ -52,7 +263,6 @@
 
             </a>
 
-            <!-- SPACE TENGAH -->
 
             <div class="nav-space"></div>
 
@@ -74,7 +284,6 @@
 
             </a>
 
-            <!-- FLOATING BUTTON -->
 
             <a href="reminder.html" class="middle-button">
 
