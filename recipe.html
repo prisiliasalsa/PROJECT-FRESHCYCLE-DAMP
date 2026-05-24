@@ -1,90 +1,114 @@
-<!--ini untuk homepage, dan ini baru kode sementara-->
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FreshCycle</title>
-
-    <!-- GLOBAL CSS -->
     <link rel="stylesheet" href="css/style.css">
-    <!-- RECIPE CSS -->
     <link rel="stylesheet" href="css/recipe.css">
-
-
-
 </head>
 
 <body>
 
     <div class="mobile-container">
 
-        <h1>
-            ini isinya recipe page
-        </h1>
+        <!-- HEADER -->
+        <div class="recipe-header">
 
+            <div class="header-top">
+                <div class="header-text">
+                    <h1>Recipe Ideas</h1>
+                    <p>Based on your expiring ingredients</p>
+                </div>
+            </div>
+
+            <div class="search-bar">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                    <circle cx="11" cy="11" r="7"/>
+                    <path d="M21 21l-4.35-4.35"/>
+                </svg>
+                <input type="text" placeholder="Search recipes..." />
+            </div>
+
+        </div>
+
+        <!-- RECIPE CARDS -->
+        <div class="recipe-list">
+
+            <div class="recipe-card">
+                <div class="card-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?w=500&q=80" alt="Chicken Soup" />
+                    <div class="badge-expiring">🔥 uses 3 expiring</div>
+                    <div class="card-meta">
+                        <div class="meta-pill">⏱ 37 min</div>
+                        <div class="meta-pill">🔥 142 cal</div>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <h3>Chicken Soup</h3>
+                    <div class="level">Beginner</div>
+                </div>
+                <button class="btn-cook">Cook Now</button>
+            </div>
+
+            <div class="recipe-card">
+                <div class="card-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=500&q=80" alt="Fried Rice" />
+                    <div class="badge-expiring">🔥 uses 4 expiring</div>
+                    <div class="card-meta">
+                        <div class="meta-pill">⏱ 20 min</div>
+                        <div class="meta-pill">🔥 230 cal</div>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <h3>Fried Rice</h3>
+                    <div class="level">Intermediate</div>
+                </div>
+                <button class="btn-cook">Cook Now</button>
+            </div>
+
+            <div class="recipe-card">
+                <div class="card-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1567982047351-76b6f93e38ee?w=500&q=80" alt="Vegetable Stir Fry" />
+                    <div class="badge-expiring">🔥 uses 5 expiring</div>
+                    <div class="card-meta">
+                        <div class="meta-pill">⏱ 15 min</div>
+                        <div class="meta-pill">🔥 185 cal</div>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <h3>Vegetable Stir Fry</h3>
+                    <div class="level">Beginner</div>
+                </div>
+                <button class="btn-cook">Cook Now</button>
+            </div>
+
+        </div>
 
         <!-- BOTTOM NAVBAR -->
-
         <div class="bottom-navbar">
 
             <a href="index.html">
-
-                <img
-                    src="image/navbar/homeNormal.png"
-                    alt="home"
-                >
-
+                <img src="image/navbar/homeNormal.png" alt="home">
             </a>
 
             <a href="inventory.html">
-
-                <img
-                    src="image/navbar/inventoryNormal.png"
-                    alt="inventory"
-                >
-
+                <img src="image/navbar/inventoryNormal.png" alt="inventory">
             </a>
-
-            <!-- SPACE TENGAH -->
 
             <div class="nav-space"></div>
 
             <a href="recipe.html">
-
-                <img
-                    src="image/navbar/recipetButton.png"
-                    alt="recipe"
-                >
-
+                <img src="image/navbar/recipetButton.png" alt="recipe">
             </a>
 
             <a href="statistics.html">
-
-                <img
-                    src="image/navbar/statisticsNormal.png"
-                    alt="statistics"
-                >
-
+                <img src="image/navbar/statisticsNormal.png" alt="statistics">
             </a>
 
-            <!-- FLOATING BUTTON -->
-
             <a href="reminder.html" class="middle-button">
-
-                <img
-                    src="image/navbar/reminderNormal.png"
-                    alt="reminder"
-                >
-
+                <img src="image/navbar/reminderNormal.png" alt="reminder">
             </a>
 
         </div>
@@ -92,5 +116,4 @@
     </div>
 
 </body>
-
 </html>
