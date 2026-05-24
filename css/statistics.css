@@ -1,0 +1,588 @@
+/* ===================== */
+/*   STATISTICS PAGE     */
+/* ===================== */
+
+
+/* HEADER */
+
+.stat-header{
+
+    background: linear-gradient(to bottom, var(--primary-color), #4AADA8);
+
+    padding: 40px 20px 24px;
+
+    color: var(--white-color);
+}
+
+.stat-header h1{
+
+    font-size: 28px;
+
+    font-weight: 700;
+
+    margin: 0 0 4px;
+}
+
+.stat-header p{
+
+    font-size: 13px;
+
+    margin: 0;
+
+    opacity: 0.85;
+}
+
+
+/* STAT CARDS */
+
+.stat-cards{
+
+    display: flex;
+
+    gap: 10px;
+
+    padding: 16px 16px 0;
+
+    background: linear-gradient(to bottom, #4AADA8, var(--background-color));
+}
+
+.stat-card{
+
+    flex: 1;
+
+    background: var(--orange-color);
+
+    border-radius: 14px;
+
+    padding: 14px 10px;
+
+    text-align: center;
+
+    color: var(--white-color);
+}
+
+.stat-card .stat-icon{
+
+    font-size: 22px;
+
+    margin-bottom: 6px;
+}
+
+.stat-card .stat-number{
+
+    font-size: 22px;
+
+    font-weight: 700;
+
+    line-height: 1;
+}
+
+.stat-card .stat-label{
+
+    font-size: 11px;
+
+    margin-top: 4px;
+
+    opacity: 0.9;
+}
+
+
+/* BODY AREA */
+
+.stat-body{
+
+    background: var(--background-color);
+
+    padding: 16px;
+
+    padding-bottom: 100px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+
+/* TOGGLE */
+
+.toggle-bar{
+
+    background: var(--white-color);
+
+    border-radius: 30px;
+
+    display: flex;
+
+    padding: 4px;
+
+    border: 1.5px solid var(--primary-color);
+}
+
+.toggle-bar button{
+
+    flex: 1;
+
+    border: none;
+
+    background: transparent;
+
+    padding: 10px;
+
+    border-radius: 26px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    color: var(--primary-color);
+
+    font-family: 'Inter', sans-serif;
+
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.toggle-bar button.active{
+
+    background: var(--primary-color);
+
+    color: var(--white-color);
+}
+
+
+/* CHART CARD */
+
+.chart-card{
+
+    background: var(--white-color);
+
+    border-radius: 16px;
+
+    padding: 16px;
+}
+
+.chart-card-header{
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 14px;
+}
+
+.chart-card-header h3{
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    margin: 0;
+
+    color: var(--dark-color);
+}
+
+
+/* LEGEND */
+
+.legend{
+
+    display: flex;
+
+    gap: 10px;
+
+    font-size: 11px;
+
+    color: #555;
+
+    align-items: center;
+}
+
+.legend-dot{
+
+    width: 10px;
+
+    height: 10px;
+
+    border-radius: 2px;
+
+    display: inline-block;
+
+    margin-right: 3px;
+}
+
+.legend-dot.used{
+
+    background: var(--primary-color);
+}
+
+.legend-dot.wasted{
+
+    background: var(--orange-color);
+}
+
+
+/* BAR CHART WRAP */
+
+.bar-chart-wrap{
+
+    display: flex;
+
+    gap: 6px;
+}
+
+.bar-chart-area{
+
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    position: relative;
+}
+
+.y-axis{
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    font-size: 10px;
+
+    color: #999;
+
+    height: 120px;
+
+    text-align: right;
+}
+
+
+/* BAR CHART */
+
+.bar-chart{
+
+    display: flex;
+
+    align-items: flex-end;
+
+    gap: 6px;
+
+    height: 120px;
+
+    /* ANIMASI MASUK */
+    animation: chartFadeIn 0.4s ease;
+}
+
+.bar-group{
+
+    flex: 1;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    gap: 2px;
+
+    height: 100%;
+}
+
+.bar{
+
+    flex: 1;
+
+    border-radius: 4px 4px 0 0;
+
+    /* ANIMASI BAR NAIK */
+    animation: barGrow 0.6s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+.bar.used{
+
+    background: var(--primary-color);
+}
+
+.bar.wasted{
+
+    background: var(--orange-color);
+}
+
+
+/* ANIMASI MUNCUL SAAT TOGGLE */
+
+.chart-enter{
+
+    animation: chartFadeIn 0.4s ease !important;
+}
+
+
+/* X AXIS */
+
+.x-axis{
+
+    display: flex;
+
+    justify-content: space-around;
+
+    margin-top: 6px;
+
+    font-size: 11px;
+
+    color: #999;
+}
+
+.x-axis span{
+
+    flex: 1;
+
+    text-align: center;
+}
+
+
+/* HIDDEN CLASS */
+
+.hidden-chart{
+
+    display: none !important;
+}
+
+
+/* KEYFRAMES */
+
+@keyframes chartFadeIn{
+
+    from{
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes barGrow{
+
+    from{
+        transform: scaleY(0);
+        transform-origin: bottom;
+    }
+
+    to{
+        transform: scaleY(1);
+        transform-origin: bottom;
+    }
+}
+
+
+/* DONUT CHART */
+
+.donut-area{
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+.donut-wrap{
+
+    position: relative;
+
+    width: 110px;
+
+    height: 110px;
+
+    flex-shrink: 0;
+}
+
+.donut-wrap svg{
+
+    transform: rotate(-90deg);
+}
+
+.donut-legend{
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.donut-legend-item{
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+.donut-legend-dot{
+
+    width: 14px;
+
+    height: 14px;
+
+    border-radius: 3px;
+
+    flex-shrink: 0;
+}
+
+.donut-legend-dot.used{
+
+    background: var(--primary-color);
+}
+
+.donut-legend-dot.wasted{
+
+    background: var(--orange-color);
+}
+
+.donut-legend-pct{
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    color: var(--dark-color);
+}
+
+.donut-legend-label{
+
+    font-size: 12px;
+
+    color: #777;
+}
+
+
+/* BADGE */
+
+.waste-badge{
+
+    background: var(--primary-color);
+
+    color: var(--white-color);
+
+    border-radius: 20px;
+
+    padding: 8px 16px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    text-align: center;
+
+    margin-top: 14px;
+}
+
+
+/* ===================== */
+/*   DONUT ANIMATION     */
+/* ===================== */
+
+.donut-teal,
+.donut-orange{
+
+    transition: stroke-dasharray 1s ease-in-out,
+                stroke-dashoffset 1s ease-in-out;
+}
+
+/* SVG rotate agar mulai dari atas (jam 12) */
+.donut-wrap svg{
+
+    transform: rotate(-90deg);
+}
+
+
+/* ===================== */
+/*   PROGRESS CARD       */
+/* ===================== */
+
+.progress-card{
+
+    background: var(--primary-color);
+
+    border-radius: 16px;
+
+    padding: 18px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+/* TOP SECTION: globe + text */
+
+.progress-card-top{
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+}
+
+.progress-globe{
+
+    font-size: 48px;
+
+    flex-shrink: 0;
+
+    line-height: 1;
+}
+
+.progress-text h3{
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    color: var(--white-color);
+
+    margin: 0 0 6px;
+}
+
+.progress-text p{
+
+    font-size: 12px;
+
+    color: var(--white-color);
+
+    opacity: 0.9;
+
+    margin: 0;
+
+    line-height: 1.5;
+}
+
+/* GOAL BADGE */
+
+.progress-goal{
+
+    background: rgba(255, 255, 255, 0.2);
+
+    border-radius: 10px;
+
+    padding: 12px 16px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    color: var(--white-color);
+
+    text-align: center;
+}

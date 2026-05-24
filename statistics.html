@@ -17,7 +17,7 @@
     <!-- GLOBAL CSS -->
     <link rel="stylesheet" href="css/style.css">
     <!-- STATISTICS CSS -->
-     <link rel="stylesheet" href="css/statistics.css">
+    <link rel="stylesheet" href="css/statistics.css">
 
 </head>
 
@@ -25,69 +25,315 @@
 
     <div class="mobile-container">
 
-        <h1>
-            ini isinya statistics page
-        </h1>
+        <!-- HEADER -->
+        <div class="stat-header">
+            <h1>Waste Statistic</h1>
+            <p>Your food saving journey</p>
+        </div>
 
+        <!-- STAT CARDS -->
+        <div class="stat-cards">
+            <div class="stat-card">
+                <div class="stat-icon">🍴</div>
+                <div class="stat-number">142</div>
+                <div class="stat-label">Items Saved</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">📉</div>
+                <div class="stat-number">32%</div>
+                <div class="stat-label">Waste cut</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">💰</div>
+                <div class="stat-number">$48</div>
+                <div class="stat-label">Saved</div>
+            </div>
+        </div>
+
+        <!-- BODY -->
+        <div class="stat-body">
+
+            <!-- TOGGLE -->
+            <div class="toggle-bar">
+                <button class="active" onclick="setToggle(this, 'weekly')">Weekly</button>
+                <button onclick="setToggle(this, 'monthly')">Monthly</button>
+            </div>
+
+            <!-- BAR CHART -->
+            <div class="chart-card">
+                <div class="chart-card-header">
+                    <h3>Food Usage vs Waste</h3>
+                    <div class="legend">
+                        <span><span class="legend-dot used"></span>Used</span>
+                        <span><span class="legend-dot wasted"></span>Wasted</span>
+                    </div>
+                </div>
+
+                <div class="bar-chart-wrap">
+
+                    <!-- Y AXIS -->
+                    <div class="y-axis" id="yAxis">
+                        <span>12</span>
+                        <span>9</span>
+                        <span>6</span>
+                        <span>3</span>
+                        <span>0</span>
+                    </div>
+
+                    <!-- BARS AREA -->
+                    <div class="bar-chart-area">
+
+                        <!-- WEEKLY BARS -->
+                        <div class="bar-chart" id="weeklyChart">
+                            <div class="bar-group">
+                                <div class="bar used"   style="height:33%"></div>
+                                <div class="bar wasted" style="height:8%"></div>
+                            </div>
+                            <div class="bar-group">
+                                <div class="bar used"   style="height:50%"></div>
+                                <div class="bar wasted" style="height:17%"></div>
+                            </div>
+                            <div class="bar-group">
+                                <div class="bar used"   style="height:25%"></div>
+                                <div class="bar wasted" style="height:8%"></div>
+                            </div>
+                            <div class="bar-group">
+                                <div class="bar used"   style="height:42%"></div>
+                                <div class="bar wasted" style="height:0%"></div>
+                            </div>
+                            <div class="bar-group">
+                                <div class="bar used"   style="height:75%"></div>
+                                <div class="bar wasted" style="height:25%"></div>
+                            </div>
+                            <div class="bar-group">
+                                <div class="bar used"   style="height:58%"></div>
+                                <div class="bar wasted" style="height:33%"></div>
+                            </div>
+                            <div class="bar-group">
+                                <div class="bar used"   style="height:50%"></div>
+                                <div class="bar wasted" style="height:8%"></div>
+                            </div>
+                        </div>
+
+                        <!-- X AXIS WEEKLY -->
+                        <div class="x-axis" id="xAxisWeekly">
+                            <span>Mon</span>
+                            <span>Tue</span>
+                            <span>Wed</span>
+                            <span>Thu</span>
+                            <span>Fri</span>
+                            <span>Sat</span>
+                            <span>Sun</span>
+                        </div>
+
+                        <!-- MONTHLY BARS (hidden) -->
+                        <div class="bar-chart hidden-chart" id="monthlyChart">
+                            <div class="bar-group">
+                                <div class="bar used"   style="height:62%"></div>
+                                <div class="bar wasted" style="height:25%"></div>
+                            </div>
+                            <div class="bar-group">
+                                <div class="bar used"   style="height:75%"></div>
+                                <div class="bar wasted" style="height:17%"></div>
+                            </div>
+                            <div class="bar-group">
+                                <div class="bar used"   style="height:87%"></div>
+                                <div class="bar wasted" style="height:5%"></div>
+                            </div>
+                            <div class="bar-group">
+                                <div class="bar used"   style="height:100%"></div>
+                                <div class="bar wasted" style="height:5%"></div>
+                            </div>
+                        </div>
+
+                        <!-- X AXIS MONTHLY (hidden) -->
+                        <div class="x-axis hidden-chart" id="xAxisMonthly">
+                            <span>W1</span>
+                            <span>W2</span>
+                            <span>W3</span>
+                            <span>W4</span>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- DONUT CHART -->
+            <div class="chart-card">
+                <div class="chart-card-header">
+                    <h3>Usage Breakdown</h3>
+                    <div class="legend">
+                        <span><span class="legend-dot used"></span>Used</span>
+                        <span><span class="legend-dot wasted"></span>Wasted</span>
+                    </div>
+                </div>
+                <div class="donut-area">
+                    <div class="donut-wrap">
+                        <svg width="110" height="110" viewBox="0 0 110 110">
+
+                            <circle
+                                cx="55" cy="55" r="30"
+                                fill="white"
+                            />
+
+                            <circle
+                                cx="55" cy="55" r="40"
+                                fill="none"
+                                stroke="#F6AD55"
+                                stroke-width="20"
+                                stroke-dasharray="251.3 251.3"
+                                stroke-dashoffset="0"
+                                class="donut-orange"
+                            />
+
+                            <circle
+                                cx="55" cy="55" r="40"
+                                fill="none"
+                                stroke="#1D828E"
+                                stroke-width="20"
+                                stroke-dasharray="0 251.3"
+                                stroke-dashoffset="0"
+                                class="donut-teal"
+                            />
+
+                        </svg>
+                    </div>
+                    <div class="donut-legend">
+                        <div class="donut-legend-item">
+                            <div class="donut-legend-dot used"></div>
+                            <div>
+                                <div class="donut-legend-pct">85%</div>
+                                <div class="donut-legend-label">Used</div>
+                            </div>
+                        </div>
+                        <div class="donut-legend-item">
+                            <div class="donut-legend-dot wasted"></div>
+                            <div>
+                                <div class="donut-legend-pct">15%</div>
+                                <div class="donut-legend-label">Wasted</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="waste-badge">🍽️ 32% less waste</div>
+            </div>
+
+            <!-- AMAZING PROGRESS CARD -->
+            <div class="progress-card">
+                <div class="progress-card-top">
+                    <div class="progress-globe">🌍</div>
+                    <div class="progress-text">
+                        <h3>Amazing Progress</h3>
+                        <p>You've saved the equivalent of 4.2 kg CO₂ this month. Keep going — you're making a real difference!</p>
+                    </div>
+                </div>
+                <div class="progress-goal">
+                    Monthly Goal: 50% reduction
+                </div>
+            </div>
+
+        </div>
 
         <!-- BOTTOM NAVBAR -->
 
         <div class="bottom-navbar">
 
             <a href="index.html">
-
-                <img
-                    src="image/navbar/homeNormal.png"
-                    alt="home"
-                >
-
+                <img src="image/navbar/homeNormal.png" alt="home">
             </a>
 
             <a href="inventory.html">
-
-                <img
-                    src="image/navbar/inventoryNormal.png"
-                    alt="inventory"
-                >
-
+                <img src="image/navbar/inventoryNormal.png" alt="inventory">
             </a>
-
-            <!-- SPACE TENGAH -->
 
             <div class="nav-space"></div>
 
             <a href="recipe.html">
-
-                <img
-                    src="image/navbar/recipeNormal.png"
-                    alt="recipe"
-                >
-
+                <img src="image/navbar/recipeNormal.png" alt="recipe">
             </a>
 
             <a href="statistics.html">
-
-                <img
-                    src="image/navbar/statisticsButton.png"
-                    alt="statistics"
-                >
-
+                <img src="image/navbar/statisticsButton.png" alt="statistics">
             </a>
 
-            <!-- FLOATING BUTTON -->
-
             <a href="reminder.html" class="middle-button">
-
-                <img
-                    src="image/navbar/reminderNormal.png"
-                    alt="reminder"
-                >
-
+                <img src="image/navbar/reminderNormal.png" alt="reminder">
             </a>
 
         </div>
 
     </div>
+
+    <script>
+
+        /* ── DONUT ANIMATION ── */
+        function animateDonut() {
+
+            const teal   = document.querySelector('.donut-teal');
+            const orange = document.querySelector('.donut-orange');
+
+            teal.style.transition   = 'none';
+            orange.style.transition = 'none';
+            teal.setAttribute('stroke-dasharray',   '0 251.3');
+            orange.setAttribute('stroke-dasharray', '251.3 251.3');
+            orange.setAttribute('stroke-dashoffset','0');
+
+            requestAnimationFrame(() => {
+                requestAnimationFrame(() => {
+                    teal.style.transition   = 'stroke-dasharray 1s ease-in-out';
+                    orange.style.transition = 'stroke-dashoffset 1s ease-in-out';
+                    teal.setAttribute('stroke-dasharray', '213.6 251.3');
+                    orange.setAttribute('stroke-dashoffset', '-213.6');
+                });
+            });
+        }
+
+        window.addEventListener('load', () => {
+            setTimeout(animateDonut, 300);
+        });
+
+
+        /* ── TOGGLE BAR CHART ── */
+        function setToggle(btn, mode) {
+
+            document.querySelectorAll('.toggle-bar button')
+                .forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const weekly   = document.getElementById('weeklyChart');
+            const xWeekly  = document.getElementById('xAxisWeekly');
+            const monthly  = document.getElementById('monthlyChart');
+            const xMonthly = document.getElementById('xAxisMonthly');
+            const yAxis    = document.getElementById('yAxis');
+
+            if (mode === 'weekly') {
+
+                monthly.classList.add('hidden-chart');
+                xMonthly.classList.add('hidden-chart');
+
+                weekly.classList.remove('hidden-chart');
+                weekly.classList.add('chart-enter');
+                xWeekly.classList.remove('hidden-chart');
+                setTimeout(() => weekly.classList.remove('chart-enter'), 500);
+
+                yAxis.innerHTML = '<span>12</span><span>9</span><span>6</span><span>3</span><span>0</span>';
+
+            } else {
+
+                weekly.classList.add('hidden-chart');
+                xWeekly.classList.add('hidden-chart');
+
+                monthly.classList.remove('hidden-chart');
+                monthly.classList.add('chart-enter');
+                xMonthly.classList.remove('hidden-chart');
+                setTimeout(() => monthly.classList.remove('chart-enter'), 500);
+
+                yAxis.innerHTML = '<span>40</span><span>30</span><span>20</span><span>10</span><span>0</span>';
+            }
+        }
+
+    </script>
 
 </body>
 
