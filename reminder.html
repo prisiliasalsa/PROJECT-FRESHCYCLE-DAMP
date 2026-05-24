@@ -57,19 +57,27 @@
     
         <div class="filter-container">
 
-            <button class="filter-btn active-btn">
+            <button class="filter-btn active-btn " 
+                data-filter="all"
+            >
                 All
             </button>
 
-            <button class="filter-btn">
+            <button class="filter-btn"
+                data-filter="fresh"
+            >
                 Fresh
             </button>
 
-            <button class="filter-btn">
+            <button class="filter-btn"
+                data-filter="expiring"
+            >
                 Expiring Soon
             </button>
 
-            <button class="filter-btn">
+            <button class="filter-btn"
+                data-filter="expired"
+            >
                 Expired
             </button>
 
@@ -77,56 +85,614 @@
 
         <!-- FOOD LIST -->
 
+        <!--LETTUCE-->
+
         <div class="food-list">
+            <!--LETTUCE-->
+                <!-- FOOD CARD -->
 
-            <!-- FOOD CARD -->
+                <div class="food-card expired-card">
 
-            <div class="food-card warning-card">
+                    <div class="food-top">
 
-                <div class="food-top">
+                        <!-- IMAGE -->
 
-                    <!-- IMAGE -->
+                        <div class="food-image">
 
-                    <div class="food-image">
+                            <img
+                                src="image/foods/lettuce.png"
+                                alt="Lettuce"
+                            >
 
-                        <img
-                            src="image/foods/carrot.png"
-                            alt="carrot"
-                        >
+                        </div>
+
+                        <!-- DETAIL -->
+
+                        <div class="food-detail">
+
+                            <h3>
+                                Lettuce
+                            </h3>
+
+                            <p>
+                                Needs immediate attention
+                            </p>
+
+                            <!--EXPIRED DESCRIPTION-->
+                            <div class="status-info">
+
+                                <img
+                                    src="image/ikon/clock_red.png"
+                                    alt="clock"
+                                    class="clock-icon"
+                                >
+
+                                <span class="expiring-text">
+                                    Expired today
+                                </span>
+
+                            </div>
+
+                        </div>
 
                     </div>
 
-                    <!-- DETAIL -->
+                    <!-- BUTTON -->
 
-                    <div class="food-detail">
+                    <button class="use-btn">
 
-                        <h3>
-                            Carrot
-                        </h3>
+                        Use Now
 
-                        <p>
-                            Recommended for upcoming meals
-                        </p>
-
-                        <span>
-                            ⏰ 7 Days Left
-                        </span>
-
-                    </div>
+                    </button>
 
                 </div>
 
-                <!-- BUTTON -->
+            <!--PARSLEY-->
 
-                <button class="use-btn">
+                <!-- FOOD CARD -->
 
-                    Use Now
+                    <div class="food-card expired-card">
 
-                </button>
+                        <div class="food-top">
 
-            </div>
+                            <!-- IMAGE -->
+
+                            <div class="food-image">
+
+                                <img
+                                    src="image/foods/parsley.png"
+                                    alt="Parsley"
+                                >
+
+                            </div>
+
+                            <!-- DETAIL -->
+
+                            <div class="food-detail">
+
+                                <h3>
+                                    Parsley
+                                </h3>
+
+                                <p>
+                                    Should be removed soon
+                                </p>
+
+                                <!--EXPIRED DESCRIPTION-->
+                                <div class="status-info">
+
+                                    <img
+                                        src="image/ikon/clock_red.png"
+                                        alt="clock"
+                                        class="clock-icon"
+                                    >
+
+                                    <span class="expiring-text">
+                                        Expired 1 day ago
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- BUTTON -->
+
+                        <button class="use-btn">
+
+                            Use Now
+
+                        </button>
+
+                    </div>
+            <!--CHICKEN-->
+
+                <!-- FOOD CARD -->
+
+                    <div class="food-card expiring-card">
+
+                                <div class="food-top">
+
+                                    <!-- IMAGE -->
+
+                                    <div class="food-image">
+
+                                        <img
+                                            src="image/foods/chicken.png"
+                                            alt="chicken"
+                                        >
+
+                                    </div>
+
+                                    <!-- DETAIL -->
+
+                                    <div class="food-detail">
+
+                                        <h3>
+                                            Chciken
+                                        </h3>
+
+                                        <p>
+                                            Use soon
+                                        </p>
+
+                                        <!--EXPIRED DESCRIPTION-->
+                                        <div class="status-info">
+
+                                            <img
+                                                src="image/ikon/clock_red.png"
+                                                alt="clock"
+                                                class="clock-icon"
+                                            >
+
+                                            <span class="expiring-text">
+                                                7 Days Left
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <!-- BUTTON -->
+
+                                <button class="use-btn">
+
+                                    Use Now
+
+                                </button>
+
+                    </div>
+            
+            <!--SHRIMP-->
+
+                <!-- FOOD CARD -->
+
+                    <div class="food-card expiring-card">
+
+                                <div class="food-top">
+
+                                    <!-- IMAGE -->
+
+                                    <div class="food-image">
+
+                                        <img
+                                            src="image/foods/shrimp.png"
+                                            alt="shrimp"
+                                        >
+
+                                    </div>
+
+                                    <!-- DETAIL -->
+
+                                    <div class="food-detail">
+
+                                        <h3>
+                                            Shrimp
+                                        </h3>
+
+                                        <p>
+                                            Consume as soon as possible
+                                        </p>
+
+                                        <!--EXPIRED DESCRIPTION-->
+                                        <div class="status-info">
+
+                                            <img
+                                                src="image/ikon/clock_red.png"
+                                                alt="clock"
+                                                class="clock-icon"
+                                            >
+
+                                            <span class="expiring-text">
+                                                7 Days Left
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <!-- BUTTON -->
+
+                                <button class="use-btn">
+
+                                    Use Now
+
+                                </button>
+
+                    </div>
+            
+            <!--DIJON MUSTARD-->
+
+                <!-- FOOD CARD -->
+
+                    <div class="food-card expiring-card">
+
+                                <div class="food-top">
+
+                                    <!-- IMAGE -->
+
+                                    <div class="food-image">
+
+                                        <img
+                                            src="image/foods/dijon mustard.png"
+                                            alt="dijon mustard"
+                                        >
+
+                                    </div>
+
+                                    <!-- DETAIL -->
+
+                                    <div class="food-detail">
+
+                                        <h3>
+                                            Dijon Mustard
+                                        </h3>
+
+                                        <p>
+                                            Best used this week
+                                        </p>
+
+                                        <!--EXPIRED DESCRIPTION-->
+                                        <div class="status-info">
+
+                                            <img
+                                                src="image/ikon/clock_red.png"
+                                                alt="clock"
+                                                class="clock-icon"
+                                            >
+
+                                            <span class="expiring-text">
+                                                7 Days Left
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <!-- BUTTON -->
+
+                                <button class="use-btn">
+
+                                    Use Now
+
+                                </button>
+
+                    </div>
+
+            <!--GARLIC-->
+
+                <!-- FOOD CARD -->
+
+                    <div class="food-card expiring-card">
+
+                                <div class="food-top">
+
+                                    <!-- IMAGE -->
+
+                                    <div class="food-image">
+
+                                        <img
+                                            src="image/foods/garlic.png"
+                                            alt="garlic mustard"
+                                        >
+
+                                    </div>
+
+                                    <!-- DETAIL -->
+
+                                    <div class="food-detail">
+
+                                        <h3>
+                                            Garlic
+                                        </h3>
+
+                                        <p>
+                                            Stillfresh but nearing expiry
+                                        </p>
+
+                                        <!--EXPIRED DESCRIPTION-->
+                                        <div class="status-info">
+
+                                            <img
+                                                src="image/ikon/clock_red.png"
+                                                alt="clock"
+                                                class="clock-icon"
+                                            >
+
+                                            <span class="expiring-text">
+                                                7 Days Left
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <!-- BUTTON -->
+
+                                <button class="use-btn">
+
+                                    Use Now
+
+                                </button>
+
+                    </div>
+            
+            <!--CARROT-->
+
+                <!-- FOOD CARD -->
+
+                    <div class="food-card expiring-card">
+
+                                <div class="food-top">
+
+                                    <!-- IMAGE -->
+
+                                    <div class="food-image">
+
+                                        <img
+                                            src="image/foods/carrot.png"
+                                            alt="carrot"
+                                        >
+
+                                    </div>
+
+                                    <!-- DETAIL -->
+
+                                    <div class="food-detail">
+
+                                        <h3>
+                                            Carrot
+                                        </h3>
+
+                                        <p>
+                                            Recommended for upcoming meals
+                                        </p>
+
+                                        <!--EXPIRED DESCRIPTION-->
+                                        <div class="status-info">
+
+                                            <img
+                                                src="image/ikon/clock_red.png"
+                                                alt="clock"
+                                                class="clock-icon"
+                                            >
+
+                                            <span class="expiring-text">
+                                                7 Days Left
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <!-- BUTTON -->
+
+                                <button class="use-btn">
+
+                                    Use Now
+
+                                </button>
+
+                    </div>
+
+            <!--SPRING UNION-->
+
+                <!-- FOOD CARD -->
+
+                    <div class="food-card fresh-card">
+
+                                <div class="food-top">
+
+                                    <!-- IMAGE -->
+
+                                    <div class="food-image">
+
+                                        <img
+                                            src="image/foods/spring onion.png"
+                                            alt="Spring Union"
+                                        >
+
+                                    </div>
+
+                                    <!-- DETAIL -->
+
+                                    <div class="food-detail">
+
+                                        <h3>
+                                            Spring Union
+                                        </h3>
+
+                                        <p>
+                                            Fresh and safe to store
+                                        </p>
+
+                                        <!--EXPIRED DESCRIPTION-->
+                                        <div class="status-info">
+
+                                            <img
+                                                src="image/ikon/clock_red.png"
+                                                alt="clock"
+                                                class="clock-icon"
+                                            >
+
+                                            <span class="expiring-text">
+                                                10 Days Left
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <!-- BUTTON -->
+
+                                <button class="use-btn">
+
+                                    Use Now
+
+                                </button>
+
+                    </div>
+            
+            <!--CHILLI-->
+
+                <!-- FOOD CARD -->
+
+                    <div class="food-card fresh-card">
+
+                                <div class="food-top">
+
+                                    <!-- IMAGE -->
+
+                                    <div class="food-image">
+
+                                        <img
+                                            src="image/foods/chilli.png"
+                                            alt="Chilli"
+                                        >
+
+                                    </div>
+
+                                    <!-- DETAIL -->
+
+                                    <div class="food-detail">
+
+                                        <h3>
+                                            Chilli
+                                        </h3>
+
+                                        <p>
+                                            Good condition
+                                        </p>
+
+                                        <!--EXPIRED DESCRIPTION-->
+                                        <div class="status-info">
+
+                                            <img
+                                                src="image/ikon/clock_red.png"
+                                                alt="clock"
+                                                class="clock-icon"
+                                            >
+
+                                            <span class="expiring-text">
+                                                13 Days Left
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <!-- BUTTON -->
+
+                                <button class="use-btn">
+
+                                    Use Now
+
+                                </button>
+
+                    </div>
+
+            <!--SUGAR-->
+
+                <!-- FOOD CARD -->
+
+                    <div class="food-card fresh-card">
+
+                                <div class="food-top">
+
+                                    <!-- IMAGE -->
+
+                                    <div class="food-image">
+
+                                        <img
+                                            src="image/foods/sugar.png"
+                                            alt="Sugar"
+                                        >
+
+                                    </div>
+
+                                    <!-- DETAIL -->
+
+                                    <div class="food-detail">
+
+                                        <h3>
+                                            Sugar
+                                        </h3>
+
+                                        <p>
+                                            Long shelf life remaining
+                                        </p>
+
+                                        <!--EXPIRED DESCRIPTION-->
+                                        <div class="status-info">
+
+                                            <img
+                                                src="image/ikon/clock_red.png"
+                                                alt="clock"
+                                                class="clock-icon"
+                                            >
+
+                                            <span class="expiring-text">
+                                                150 Days Left
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <!-- BUTTON -->
+
+                                <button class="use-btn">
+
+                                    Use Now
+
+                                </button>
+
+                    </div>
 
         </div>
+
+        
+
+
+
+
 
         <!-- BOTTOM NAVBAR -->
 
@@ -185,7 +751,11 @@
 
         </div>
 
+        
+
     </div>
+
+<script src="js/reminder.js"></script>
 
 </body>
 

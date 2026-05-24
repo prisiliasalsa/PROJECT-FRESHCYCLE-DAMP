@@ -1,3 +1,10 @@
+html, body {
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
 .mobile-container{
 
     background:
@@ -8,7 +15,14 @@
     );
 
     padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    height: 100vh;        
+    overflow: hidden;     
+    box-sizing: border-box;
 }
+
 
 /* HEADER */
 
@@ -87,6 +101,8 @@
     margin-right: -18px;
 
     margin-left: -18px;
+
+     flex-shrink: 0
 }
 
 .filter-btn{
@@ -125,15 +141,23 @@
 
 /* FOOD LIST */
 
-.food-list{
-
+.food-list {
     margin-top: 24px;
-
     display: flex;
-
     flex-direction: column;
-
     gap: 18px;
+
+    overflow-y: auto;
+    flex: 1;              
+    padding-bottom: 100px; 
+
+    scrollbar-width: none;        
+    -ms-overflow-style: none;     
+}
+
+/* Sembunyikan scrollbar di Chrome/Safari */
+.food-list::-webkit-scrollbar {
+    display: none;
 }
 
 /* FOOD CARD */
@@ -168,8 +192,6 @@
 
     height: 58px;
 
-    background: #FFF5E9;
-
     border-radius: 14px;
 
     display: flex;
@@ -181,10 +203,52 @@
     flex-shrink: 0;
 }
 
+/* EXPIRED */
+
+.expired-card{
+
+    border: 2px solid #FFD1D1;
+}
+
+.expired-card .food-image{
+
+    background: #FFF0F0;
+
+    border: 1.5px solid #FFD1D1;
+}
+
+/* EXPIRING */
+
+.expiring-card{
+
+    border: 2px solid #FFD58A;
+}
+
+.expiring-card .food-image{
+
+    background: #FFF5E9;
+
+    border: 1.5px solid #FFD58A;
+}
+
+/* FRESH */
+
+.fresh-card{
+
+    border: 2px solid #A9E190;
+}
+
+.fresh-card .food-image{
+
+    background: #F1FFE8;
+
+    border: 1.5px solid #A9E190;
+}
 .food-image img{
 
     width: 34px;
 }
+
 
 /* FOOD DETAIL */
 
@@ -238,5 +302,27 @@
     font-weight: 700;
 
     cursor: pointer;
+}
+
+/* STATUS INFO */
+
+.status-info{
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+}
+
+/* CLOCK ICON */
+
+.clock-icon{
+
+    width: 16px;
+
+    height: 16px;
+
+    object-fit: contain;
 }
 
