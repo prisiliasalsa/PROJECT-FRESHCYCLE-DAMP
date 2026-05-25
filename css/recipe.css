@@ -2,9 +2,9 @@
     background: linear-gradient(
         to bottom,
         var(--primary-color),
-        var(--background-color) 40%
-    ) !important;
-    padding: 20px !important;
+        var(--background-color) 320px
+    ) ;
+    padding: 20px;
 }
 
 /* HEADER */

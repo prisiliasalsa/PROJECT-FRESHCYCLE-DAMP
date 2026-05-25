@@ -5,23 +5,17 @@
     height: 852px;
     position: relative;
     overflow: hidden;
+    background: linear-gradient(       /* ← TAMBAH INI */
+        to bottom,
+        var(--primary-color),
+        var(--background-color) 320px
+    );
 }
 
 
 .mobile-container h1 {
     margin: 0;
     padding: 0;
-}
-
-.gradient-background {
-    width: 393px;
-    height: 275px;
-    background: linear-gradient(180deg, #1D828E 0%, #FFFFFF 100%);
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-radius: 0 0 24px 24px;
-    z-index: 1;
 }
 
 .header {

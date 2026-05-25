@@ -7,8 +7,10 @@
     linear-gradient(
         to bottom,
         var(--primary-color),
-        var(--background-color) 40%
+        var(--background-color) 320px
     );
+
+    width: 390px;
 
     padding: 20px;
 
